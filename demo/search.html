@@ -7,17 +7,32 @@
     <title>Search</title>
 </head>
 <body>
-<div class="yk-content">
+<div class="yk-header bg-color-honeydew color-skyBlue">
+    <div class="left"><a href="index.html" class="color-skyBlue"><i class="fa fa-chevron-left"></i></a></div>
+    <div class="title">Search</div>
+    <div class="right"><i class="fa fa-star"></i></div>
+</div>
+<div class="yk-navbar bg-color-honeydew">
+    <a class="navbar-item active">
+        <i class="fa fa-home icon"></i>
+        <span class="name">样式展示</span>
+    </a>
+    <a class="navbar-item">
+        <i class="fa fa-list icon"></i>
+        <span class="name">......</span>
+    </a>
+</div>
+<div class="yk-content" >
     <!-- 带suggest的搜索框 -->
-    <div class="yk-search">
+    <div class="yk-search" id="yk-search">
         <!-- 搜索框 -->
         <form class="yk-search-form" action="#">
             <div class="yk-search-input-wrap">
                 <i class="fa fa-search yk-search-icon"></i>
-                <input type="text" class="yk-search-input" placeholder="搜索" autocomplete="off" required/>
-                <i class="fa fa-close yk-search-clear"></i>
+                <input type="text" class="yk-search-input" onfocus="handleFocus()" id="search-input" placeholder="搜索" autocomplete="off" required/>
+                <i class="fa fa-close yk-search-clear" onclick="removeSearch()"></i>
             </div>
-            <span class="yk-search-cancel">取消</span>
+            <span class="yk-search-cancel" onclick="removeFocus()">取消</span>
         </form>
         <!-- 搜索建议 -->
         <ul class="yk-search-suggest">
@@ -28,7 +43,20 @@
             <li class="yk-suggest-item">诺基亚1110</li>
         </ul>
     </div>
-    <p class="content">内容区</p>
 </div>
 </body>
+<script>
+    function handleFocus() {
+        let content = document.querySelector('#yk-search')
+        content.classList.add('on-focus')
+    }
+    function removeFocus() {
+        let content = document.querySelector('#yk-search')
+        content.classList.remove('on-focus')
+    }
+    function removeSearch() {
+        let search = document.querySelector('#search-input')
+        search.value = ''
+    }
+</script>
 </html>

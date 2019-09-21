@@ -146,6 +146,7 @@ html{
     position: relative;
     overflow-y: auto;
     height: 100%;
+    margin-bottom: .5rem;
 }
 /* 根据header和navbar自动适应内容区高度 */
 .yk-header ~ .yk-content{
@@ -210,7 +211,7 @@ html{
 }
 /* 被选中时的样式 */
 .yk-navbar > .navbar-item.active {
-    color: #09BB07;
+    color: #87CEEB;
 }
 /* 导航栏图标 */
 .yk-navbar > .navbar-item > .icon {
@@ -641,11 +642,11 @@ html{
     color: #333;
 }
 /* 不需要边框时取消格子上的border */
-.tt-grid.no-border > .tt-grid-item{
-    border: none !important;
+.yk-grid.no-border > .yk-grid-item{
+    border: none!important;
 }
 /* 不需要边框时取消格子上所以的border */
-.yk-grid.no-border > .tt-grid-item{
+.yk-grid.no-border > .yk-grid-item{
     border: none;
 }
 /* 两列网格 */
@@ -1118,4 +1119,115 @@ html{
 .yk-article .yk-article-img {
     max-width: 100%;
     margin: auto;
+}
+/* 颜色组件 */
+/*
+ * @Description: 颜色样式
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+/* 猩红 */
+.bg-color-crimson {
+    background: #DC143C;
+}
+.color-crimson {
+    color: #DC143C;
+}
+/* 粉红 */
+.bg-color-hotpink {
+    background: #FF69B4;
+}
+.color-hotpink {
+    color: #FF69B4;
+}
+/* 紫色 */
+.bg-color-purple {
+    background: #800080;
+}
+.color-purple {
+    color: #800080;
+}
+/* 紫罗兰 */
+.bg-color-violet {
+    background: #EE82EE;
+}
+.color-violet {
+    color: #EE82EE;
+}
+/* 熏衣草花的淡紫色 */
+.bg-color-lavender {
+    background: #E6E6FA;
+}
+.color-lavender {
+    color: #E6E6FA;
+}
+/* 淡白色 */
+.bg-color-ghostWhite {
+    background: #F8F8FF;
+}
+.color-ghostWhite {
+    color: #F8F8FF;
+}
+/* 天蓝色 */
+.bg-color-skyBlue {
+    background: #87CEEB;
+}
+.color-skyBlue {
+    color: #87CEEB;
+}
+/* 淡青色 */
+.bg-color-lightCyan {
+    background: #E1FFFF;
+}
+.color-lightCyan {
+    color: #E1FFFF;
+}
+/* 绿宝石 */
+.bg-color-turquoise {
+    background: #40E0D0;
+}
+.color-turquoise {
+    color: #40E0D0;
+}
+/* 苍白的绿色 */
+.bg-color-paleGreen {
+    background: #98FB98;
+}
+.color-paleGreen {
+    color: #98FB98;
+}
+/* 蜂蜜 */
+.bg-color-honeydew {
+    background: #F0FFF0;
+}
+.color-honeydew {
+    color: #F0FFF0;
+}
+/* 卡其布 */
+.bg-color-khaki {
+    background: #F0E68C;
+}
+.color-khaki {
+    color: #F0E68C;
+}
+/* 晒黑 */
+.bg-color-tan {
+    background: #D2B48C;
+}
+.color-tan {
+    color: #D2B48C;
+}
+/* 番茄 */
+.bg-color-tomato {
+    background: #FF6347;
+}
+.color-tomato {
+    color: #FF6347;
+}
+/* 银白色 */
+.bg-color-sliver {
+    background: #C0C0C0;
+}
+.color-sliver {
+    color: #C0C0C0;
 }

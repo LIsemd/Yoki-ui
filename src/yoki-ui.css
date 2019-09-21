@@ -54,3 +54,6 @@
 
 /* article文本组件 */
 @import './article.css';
+
+/* 颜色组件 */
+@import './color.css';

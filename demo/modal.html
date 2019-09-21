@@ -7,53 +7,70 @@
     <title>Modal</title>
 </head>
 <body>
-<div class="yk-header">
-    <div class="left"><i class="fa fa-chevron-left"></i></div>
+<div class="yk-header bg-color-honeydew color-skyBlue">
+    <div class="left"><a href="index.html" class="color-skyBlue"><i class="fa fa-chevron-left"></i></a></div>
     <div class="title">Modal</div>
-    <div class="right"><i class="fa fa-ellipsis-h"></i></div>
+    <div class="right"><i class="fa fa-star"></i></div>
 </div>
-<div class="yk-navbar">
-    <a class="navbar-item">
-        <i class="fa fa-home icon"></i>
-        <span class="name">首页</span>
-    </a>
+<div class="yk-navbar bg-color-honeydew">
     <a class="navbar-item active">
+        <i class="fa fa-home icon"></i>
+        <span class="name">样式展示</span>
+    </a>
+    <a class="navbar-item">
         <i class="fa fa-list icon"></i>
-        <span class="name">分类</span>
-    </a>
-    <a class="navbar-item">
-        <i class="fa fa-search icon"></i>
-        <span class="name">发现</span>
-    </a>
-    <a class="navbar-item">
-        <i class="fa fa-user-o icon"></i>
-        <span class="name">我的</span>
+        <span class="name">......</span>
     </a>
 </div>
 <div class="yk-content">
-    <p>内容区</p>
+    <h1 class="yk-panel-title">Modal组件</h1>
+    <div class="yk-panel-body">
+        <a class="yk-btn btn-primary" id="js-show-modal">普通Modal</a>
+        <br>
+        <a class="yk-btn btn-primary" id="js-show-modal-img">图片Modal</a>
+    </div>
 </div>
-<!-- 模态框 -->
-<!--<div class="yk-modal show">-->
-<!--    <div class="yk-mask"></div>-->
-<!--    <div class="yk-modal-wrap">-->
-<!--        <div class="yk-modal-body">-->
-<!--            <p>您的会员即将到期，请及时续费，以免影响您的权益。</p>-->
-<!--        </div>-->
-<!--        <div class="yk-modal-footer">-->
-<!--            <a class="yk-btn">下次再说</a>-->
-<!--            <a class="yk-btn">立即续费</a>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<div class="yk-modal show">
+<div class="yk-modal" id="modal">
+    <div class="yk-mask"></div>
+    <div class="yk-modal-wrap">
+        <div class="yk-modal-body">
+            <p>您的会员即将到期，请及时续费，以免影响您的权益。</p>
+        </div>
+        <div class="yk-modal-footer">
+            <a class="yk-btn" id="js-close-modal">下次再说</a>
+            <a class="yk-btn">立即续费</a>
+        </div>
+    </div>
+</div>
+<div class="yk-modal" id="modal-img">
     <div class="yk-mask"></div>
     <div class="yk-modal-wrap">
         <div class="yk-modal-body no-padding">
             <img class="yk-modal-img" src="../img/list-img.jpg" alt="">
         </div>
-        <i class="fa fa-close yk-modal-close"></i>
+        <i class="fa fa-close yk-modal-close" id="js-close-modal-img"></i>
     </div>
 </div>
 </body>
+<script>
+    window.onload = ()=>{
+        let modalEle = document.querySelector('#modal');
+        let modalImgEle = document.querySelector('#modal-img');
+
+        document.querySelector('#js-show-modal').onclick = (e) => {
+            modalEle.classList.add('show');
+        };
+        document.querySelector('#js-close-modal').onclick = (e) => {
+            modalEle.classList.remove('show');
+        };
+
+        document.querySelector('#js-show-modal-img').onclick = (e) => {
+            modalImgEle.classList.add('show');
+        };
+        document.querySelector('#js-close-modal-img').onclick = (e) => {
+            modalImgEle.classList.remove('show');
+        };
+
+    };
+</script>
 </html>

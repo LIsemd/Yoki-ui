@@ -10,6 +10,7 @@
     position: relative;
     overflow-y: auto;
     height: 100%;
+    margin-bottom: .5rem;
 }
 
 /* 根据header和navbar自动适应内容区高度 */

@@ -40,12 +40,12 @@
 }
 
 /* 不需要边框时取消格子上的border */
-.tt-grid.no-border > .tt-grid-item{
-    border: none !important;
+.yk-grid.no-border > .yk-grid-item{
+    border: none!important;
 }
 
 /* 不需要边框时取消格子上所以的border */
-.yk-grid.no-border > .tt-grid-item{
+.yk-grid.no-border > .yk-grid-item{
     border: none;
 }
 
