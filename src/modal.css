@@ -1,0 +1,87 @@
+/*
+ * @Description: 模态框组件
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+
+/* 模态框 */
+.yk-modal {
+    display: none;
+}
+
+/* 控制模态框显示 */
+.yk-modal.show {
+    display: block;
+}
+
+/* 模态框窗口容器 */
+.yk-modal .yk-modal-wrap {
+    position: absolute;
+    width: 75%;
+    max-width: 480px;
+    top: 45%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #fff;
+    border-radius: .4rem;
+    z-index: 301;
+}
+
+/* 模态框内容区 */
+.yk-modal .yk-modal-body {
+    padding: 1.8rem .8rem 1.5rem;
+    text-align: center;
+    font-size: .8rem;
+    line-height: 1.2rem;
+    overflow: hidden;
+}
+
+/* 模态框尾部 */
+.yk-modal .yk-modal-footer {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+/* 模态框尾部按钮 */
+.yk-modal .yk-modal-footer .yk-btn {
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    font-size: .8rem;
+}
+
+/* 按钮间隔 */
+.yk-modal .yk-modal-footer .yk-btn + .yk-btn {
+    border-left: 1px solid #ddd;
+}
+
+/* 控制模态框的内边距 */
+.yk-modal .yk-modal-body.no-padding {
+    padding: 0;
+}
+
+/* 图片形式的模态框 */
+.yk-modal .yk-modal-body .yk-modal-img {
+    display: block;
+    width: 100%;
+    border-radius: .3rem;
+}
+
+/* 图片形式的关闭按钮 */
+.yk-modal .yk-modal-close {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 1.3rem;
+    line-height: 1.3rem;
+    margin: auto;
+    bottom: -3rem;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 100;
+    color: #eee;
+    border: 1px solid #eee;
+    border-radius: 50%;
+}

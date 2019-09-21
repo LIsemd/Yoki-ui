@@ -1,0 +1,1121 @@
+
+@import '//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css';
+/*
+ * @Description: Yoki样式库
+ * @Author: Lisemd
+ * @Date: 2019/9/20
+ */
+/* css reset */
+/* 去掉所有元素的内外边距 */
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, pre,
+a, img,  ul, li, form, label, input,
+table, tbody, tfoot, thead, tr, th, td,
+audio, video {
+    margin: 0;
+    padding: 0;
+}
+/* 统一全局字体 */
+body {
+    font-family: -apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif
+}
+/* 列表元素去掉默认的列表样式 */
+ol, ul {
+    list-style: none;
+}
+/* Table元素的边框折叠 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* 去掉默认的下划线 */
+a{
+    text-decoration: none;
+}
+/* 去掉input自带的边缘效果和背景颜色 */
+input{
+    outline: none;
+    background: none;
+}
+/* 公共样式 */
+/*
+ * @Description: 公共样式
+ * @Author: Lisemd
+ * @Date: 2019/9/20
+ */
+/* 屏幕宽度在340px至410px时，基准尺寸使用20px */
+html{
+    font-size: 20px;
+    height: 100%;
+}
+/* 屏幕宽度小于340px时，基准尺寸使用18px */
+@media (max-width: 340px){
+    html{
+        font-size: 18px;
+        height: 100%;
+    }
+}
+/* 屏幕宽度大于410px时，基准尺寸使用22px */
+@media (min-width: 410px){
+    html{
+        font-size: 22px;
+        height: 100%;
+    }
+}
+/* body默认样式 */
+.body {
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+}
+.yk-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 300;
+}
+/* 字体图标 */
+/*
+ * @Description: 字体图标
+ * @Author: Lisemd
+ * @Date: 2019/9/20
+ */
+/* 字体图标库 */
+.fa{
+    display: inline-block;
+    text-align: center;
+}
+/* 标题栏样式 */
+/*
+ * @Description: 头部导航栏
+ * @Author: Lisemd
+ * @Date: 2019/9/20
+ */
+/* 头部导航栏 */
+.yk-header {
+    display: -webkit-box;
+    display: flex;
+    position: fixed;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    max-width: 640px;
+    height: 2.3rem;
+    line-height: 2.3rem;
+    text-align: center;
+    top: 0;
+    z-index: 200;
+    border-bottom: 1px solid #ddd;
+    background: #f8f8f8;
+}
+/* 左侧功能区 */
+.yk-header > .left {
+    flex-basis: 3rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+/* 中间标题部分 */
+.yk-header > .title {
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* 右侧功能区 */
+.yk-header > .right {
+    flex-basis: 3rem;
+    flex-shrink: 0;
+}
+/* 内容区样式 */
+/*
+ * @Description: 内容区
+ * @Author: Lisemd
+ * @Date: 2019/9/20
+ */
+/* 内容区 */
+.yk-content {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+    overflow-y: auto;
+    height: 100%;
+}
+/* 根据header和navbar自动适应内容区高度 */
+.yk-header ~ .yk-content{
+    padding-top: 2.3rem;
+}
+.yk-navbar ~ .yk-content{
+    padding-bottom: 2.5rem;
+}
+/* 内容分区 -- Panel 面板 */
+/* 面板 */
+.yk-content .yk-panel-title {
+    height: 1.8rem;
+    line-height: 1.8rem;
+    padding-left: 1rem;
+    color: #aaa;
+    background: #fff;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    font-weight: normal;
+}
+/* Panel内容区 */
+.yk-content .yk-panel-body {
+    position: relative;
+    margin-bottom: .6rem;
+    padding: .6rem 1rem;
+    background: #fff;
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+/* 手动设置内容区是否有内边距 */
+.yk-content .yk-panel-body.no-padding {
+    padding: 0;
+}
+/* 导航条样式 */
+/*
+ * @Description: 底部导航栏
+ * @Author: Lisemd
+ * @Date: 2019/9/20
+ */
+/* 底部导航栏 */
+.yk-navbar {
+    display: -webkit-box;
+    display: flex;
+    position: fixed;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+    max-width: 640px;
+    height: 2.5rem;
+    z-index: 200;
+    border-top: 1px solid #ddd;
+    background: #f8f8f8;
+    text-align: center;
+}
+/* 导航项目 */
+.yk-navbar > .navbar-item {
+    -webkit-box-flex: 1;
+            flex: 1;
+    color: #808080;
+}
+/* 被选中时的样式 */
+.yk-navbar > .navbar-item.active {
+    color: #09BB07;
+}
+/* 导航栏图标 */
+.yk-navbar > .navbar-item > .icon {
+    padding: .3rem 0 .2rem;
+    font-size: 1.1rem;
+}
+/* 导航栏名称 */
+.yk-navbar > .navbar-item > .name {
+    display: block;
+    font-size: .5rem;
+}
+/* 输入框样式 */
+/*
+ * @Description: 输入框样式
+ * @Author: Lisemd
+ * @Date: 2019/9/20
+ */
+/* 表单的单行容器 */
+.yk-form-item {
+    display: -webkit-box;
+    display: flex;
+    position: relative;
+    padding-left: 1rem;
+    border-bottom: 1px solid #eee;
+}
+/* 去掉最后一行的下边框 */
+.yk-form-item:last-child {
+    border-bottom: none;
+}
+/* 表单标签 */
+.yk-form-item > .yk-form-label {
+    display: block;
+    width: 3.5rem;
+    font-size: .8rem;
+    color: #666;
+    height: 2rem;
+    line-height: 2rem;
+}
+/* 表单内容区 */
+.yk-form-item > .yk-form-body {
+    -webkit-box-flex: 1;
+            flex: 1;
+}
+/* 输入框 */
+.yk-form-item > .yk-form-body > .yk-input {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: .8rem;
+    border: none;
+}
+/* 表单中的清空按钮 */
+.yk-form-item > .yk-form-body > .yk-input-reset {
+    position: absolute;
+    width: .8rem;
+    height: .8rem;
+    line-height: .8rem;
+    top: 50%;
+    margin-top: -.4rem;
+    right: 1rem;
+    font-size: .6rem;
+    background: #aaa;
+    color: #fff;
+    border-radius: 50%;
+}
+/* 表单中的错误提示按钮 */
+.yk-form-item > .yk-form-body > .yk-input-warning {
+    position: absolute;
+    width: .8rem;
+    height: .8rem;
+    line-height: .8rem;
+    top: 50%;
+    margin-top: -.4rem;
+    right: 1rem;
+    font-size: .6rem;
+    color: red;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+/* 自定义单选 */
+.yk-form-item > .yk-radio{
+    -webkit-box-flex: 1;
+            flex: 1;
+    font-size: .8rem;
+    line-height: 2rem;
+}
+/* 未选中状态的图标 */
+.yk-form-item > .yk-radio > .yk-radio-icon{
+    margin-right: .5rem;
+    color: #09BB07;
+    visibility: hidden;
+}
+/* 选中状态的图标 */
+.yk-form-item > .yk-radio.checked > .yk-radio-icon{
+    visibility: visible;
+}
+/* 隐藏的radio类型的input */
+.yk-form-item > .yk-radio > .yk-radio-input{
+    position: absolute;
+    left: -999rem;
+}
+/* 自定义多选 */
+.yk-form-item > .yk-check {
+    -webkit-box-flex: 1;
+            flex: 1;
+    font-size: .8rem;
+    line-height: 2rem;
+}
+/* 未选中状态的图标 */
+.yk-form-item > .yk-check > .yk-check-icon {
+    margin-right: .5rem;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    color: rgba(0,0,0,0);
+    font-size: .6rem;
+    width: .8rem;
+    height: .8rem;
+    line-height: .8rem;
+}
+/* 选中状态的图标 */
+.yk-form-item > .yk-check.checked > .yk-check-icon {
+    background: #09BB07;
+    color: #fff;
+    border-color: rgba(0,0,0,0)
+}
+/* 隐藏的check类型的input */
+.yk-form-item > .yk-check > .yk-check-input {
+    position: absolute;
+    left: -999rem;
+}
+/* 按钮的样式 */
+/*
+ * @Description: 按钮样式
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+/* 按钮默认样式 */
+.yk-btn {
+    display: block;
+    position: relative;
+    width: 10rem;
+    margin: 0 auto;
+    padding: .5rem 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: .7rem;
+    text-align: center;
+    color: #000;
+    border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+/* 定制主操作按钮 */
+.yk-btn.yk-btn-primary {
+    background-color: #1AAD19;
+    color: #fff;
+}
+/* 定制警示按钮 */
+.yk-btn.yk-btn-warning {
+    background-color: #E64340;
+    color: #fff;
+}
+/* 定制不可用按钮 */
+.yk-btn.yk-btn-disable {
+    background-color: #F7F7F7;
+    opacity: .6;
+    color: #999;
+}
+/* 大按钮 */
+.yk-btn.yk-btn-large {
+    width: 100%;
+    font-size: .9rem;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+/* 小按钮 */
+.yk-btn.yk-btn-small {
+    display: inline-block;
+    width: 3rem;
+    font-size: .5rem;
+    padding: .2rem .1rem;
+}
+/* 镂空按钮 */
+.yk-btn.yk-btn-primary.yk-btn-hollow {
+    background-color: rgba(0,0,0,0);
+    border-color: #1AAD19;
+    color: #1AAD19;
+}
+.yk-btn.yk-btn-warning.yk-btn-hollow {
+    background-color: rgba(0,0,0,0);
+    border-color: #E64340;
+    color: #E64340;
+}
+.yk-btn.yk-btn-disable.yk-btn-hollow {
+    background-color: #F7F7F7;
+    border-color: #999;
+    color: #999;
+}
+/* 搜索栏的样式 */
+/*
+ * @Description: 搜索框样式
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+/* 搜索框 */
+.yk-search{
+    max-width: 640px;
+    margin: 0 auto;
+    background: #f8f8f8;
+}
+/* 搜索状态中，覆盖内容区 */
+.yk-search.on-focus{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+/* 处理有标题栏的情况 */
+.yk-header ~ .yk-content .yk-search.on-focus{
+    top: 2.3rem;
+}
+/* 处理有导航栏的情况 */
+.yk-navbar ~ .yk-content .yk-search.on-focus{
+    bottom: 2.5rem;
+}
+/* 搜索栏中的表单 */
+.yk-search > .yk-search-form{
+    display: -webkit-box;
+    display: flex;
+    height: 2.3rem;
+    -webkit-box-align:center;
+            align-items:center;
+}
+/* 输入框容器 */
+.yk-search > .yk-search-form > .yk-search-input-wrap {
+    -webkit-box-flex: 1;
+            flex: 1;
+    position: relative;
+    padding: 0 .5rem;
+}
+/* 取消按钮 */
+.yk-search > .yk-search-form > .yk-search-cancel {
+    -webkit-box-flex: 0;
+            flex: 0 0 2.2rem;
+    padding-right: .5rem;
+    text-align: center;
+    font-size: .7rem;
+    display: none;
+}
+/* 对取消按钮的控制 */
+.yk-search.on-focus >.yk-search-form > .yk-search-cancel {
+    display: block;
+}
+/* 搜索图标 */
+.yk-search .yk-search-icon {
+    position: absolute;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .7rem;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #ccc;
+}
+/* 输入框 */
+.yk-search .yk-search-input {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    height: 1.6rem;
+    border: none;
+    font-size: .8rem;
+    padding-left: 1.5rem;
+    background: #fff;
+    border-radius: .2rem;
+}
+/* 清空按钮的样式 */
+.yk-search .yk-search-clear{
+    position: absolute;
+    height: .8rem;
+    line-height: .8rem;
+    width: .8rem;
+    font-size: .6rem;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: 1rem;
+    border-radius: 50%;
+    color: #fff;
+    background: #ccc;
+    display: none;
+}
+/* 对清空按钮的控制 */
+.yk-search.on-focus .yk-search-input:valid + .yk-search-clear{
+    display: block;
+}
+/* 搜索建议 */
+.yk-search > .yk-search-suggest{
+    display: none;
+}
+.yk-search.on-focus > .yk-search-suggest{
+    display: block;
+}
+/* 搜索建议的内容 */
+.yk-search > .yk-search-suggest > .yk-suggest-item{
+    padding-left: 1rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: .8rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+/* 列表的样式 */
+/*
+ * @Description: 列表组件
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+/* 列表里每一行的容器 */
+.yk-list > .yk-list-item{
+    display: -webkit-box;
+    display: flex;
+    position: relative;
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    background: #fff;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+/* 列表项的图片容器 */
+.yk-list .item-img-wrap {
+    -webkit-box-flex: 0;
+            flex: 0 0 5rem;
+    height: 5rem;
+    margin-right: .5rem;
+    border-radius: .2rem;
+    overflow: hidden;
+}
+/* 列表项的图片 */
+.yk-list .item-img-wrap > .item-img{
+    width: 100%;
+    height: 100%;
+}
+/* 列表项的文字区域 */
+.yk-list .item-content-wrap{
+    position: relative;
+    -webkit-box-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+}
+/* 列表项的标题 */
+.yk-list .item-content-wrap > .item-title {
+    height: 2rem;
+    line-height: 1rem;
+    font-size: .8rem;
+    font-weight: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* 列表项的价格字段 */
+.yk-list .item-content-wrap > .item-price{
+    font-size: .8rem;
+    font-weight: 600;
+    color: #e0652f;
+}
+/* 列表项的描述字段 */
+.yk-list .item-content-wrap > .item-desc{
+    color: #999;
+    font-size: .6rem;
+}
+/* 网格组件的样式 */
+/*
+ * @Description: 网格组件
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+/* 网格组件 */
+.yk-grid {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #ddd;
+}
+/* 网格中的格子 */
+.yk-grid > .yk-grid-item {
+    position: relative;
+    -webkit-box-flex: 1;
+            flex: 1 1 33%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 1.2rem 0;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+/* 默认三列 */
+.yk-grid .yk-grid-item:nth-child(3n) {
+    border-right: none;
+}
+/* grid内容区 */
+.yk-grid > .yk-grid-item > .yk-grid-icon{
+    font-size: 1.5rem;
+    color: #aaa;
+    margin-bottom: .5rem;
+}
+.yk-grid > .yk-grid-item > .yk-grid-label{
+    font-size: .6rem;
+    color: #333;
+}
+/* 不需要边框时取消格子上的border */
+.tt-grid.no-border > .tt-grid-item{
+    border: none !important;
+}
+/* 不需要边框时取消格子上所以的border */
+.yk-grid.no-border > .tt-grid-item{
+    border: none;
+}
+/* 两列网格 */
+.yk-grid.yk-grid-2 .yk-grid-item{
+    border-right: 1px solid #ddd;
+    flex-basis: 50%;
+    padding: 1.8rem 0;
+}
+.yk-grid.yk-grid-2 .yk-grid-item:nth-child(2n){
+    border-right: none;
+}
+/* 四列网格 */
+.yk-grid.yk-grid-4 .yk-grid-item{
+    border-right: 1px solid #ddd;
+    flex-basis: 25%;
+    padding: .9rem 0;
+}
+.yk-grid.yk-grid-4 .yk-grid-item:nth-child(4n){
+    border-right: none;
+}
+/* 五列网格 */
+.yk-grid.yk-grid-5 .yk-grid-item{
+    border-right: 1px solid #ddd;
+    flex-basis: 20%;
+    padding: .6rem 0;
+}
+.yk-grid.yk-grid-5 .yk-grid-item:nth-child(5n){
+    border-right: none;
+}
+/* 菜单组件的样式 */
+/*
+ * @Description: 菜单组件
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+/* 菜单项 */
+.yk-menu > .yk-menu-item {
+    display: -webkit-box;
+    display: flex;
+    height: 2.3rem;
+    padding: 0 1rem;
+    -webkit-box-align: center;
+            align-items: center;
+    border-bottom: 1px solid #eee;
+    font-size: .8rem;
+}
+/* 菜单名称 */
+.yk-menu > .yk-menu-item > .yk-menu-name {
+    -webkit-box-flex: 1;
+            flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #333;
+}
+/* 菜单信息 */
+.yk-menu > .yk-menu-item > .yk-menu-value{
+    max-width: 5rem;
+    height: 1rem;
+    line-height: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #999;
+}
+/* 下级操作引导图标 */
+.yk-menu > .yk-menu-item > .yk-menu-icon{
+    margin-left: .3rem;
+    color: #999;
+}
+/* 切换开关 */
+.yk-menu > .yk-menu-item > .yk-switch{
+    position: relative;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    width: 2.6rem;
+    height: 1.4rem;
+    border: 1px solid #ccc;
+    outline: 0;
+    border-radius: .75rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    /* 去掉webkit内核里默认的样式 */
+    -webkit-appearance: none;
+    /* 去掉webkit内核里默认的点击效果 */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-transition: background-color .3s, border .3s;
+    transition: background-color .3s, border .3s;
+}
+/* 选中状态下，改变开关边框和背景色 */
+.yk-menu > .yk-menu-item > .yk-switch:checked {
+    border-color: #07C160;
+    background-color: #07C160;
+}
+/* 使用伪元素实现圆形按钮 */
+.yk-menu > .yk-menu-item >.yk-switch::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: .7rem;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 2px #999;
+            box-shadow: 0 0 2px #999;
+    -webkit-transition: left .3s;
+    transition: left .3s;
+}
+/* 选中状态下，改变开关边框和背景色 */
+.yk-menu > .yk-menu-item > .yk-switch:checked::after {
+    left: 1.2rem;
+}
+/* 模态框组件的样式 */
+/*
+ * @Description: 模态框组件
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+/* 模态框 */
+.yk-modal {
+    display: none;
+}
+/* 控制模态框显示 */
+.yk-modal.show {
+    display: block;
+}
+/* 模态框窗口容器 */
+.yk-modal .yk-modal-wrap {
+    position: absolute;
+    width: 75%;
+    max-width: 480px;
+    top: 45%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #fff;
+    border-radius: .4rem;
+    z-index: 301;
+}
+/* 模态框内容区 */
+.yk-modal .yk-modal-body {
+    padding: 1.8rem .8rem 1.5rem;
+    text-align: center;
+    font-size: .8rem;
+    line-height: 1.2rem;
+    overflow: hidden;
+}
+/* 模态框尾部 */
+.yk-modal .yk-modal-footer {
+    display: -webkit-box;
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+/* 模态框尾部按钮 */
+.yk-modal .yk-modal-footer .yk-btn {
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    font-size: .8rem;
+}
+/* 按钮间隔 */
+.yk-modal .yk-modal-footer .yk-btn + .yk-btn {
+    border-left: 1px solid #ddd;
+}
+/* 控制模态框的内边距 */
+.yk-modal .yk-modal-body.no-padding {
+    padding: 0;
+}
+/* 图片形式的模态框 */
+.yk-modal .yk-modal-body .yk-modal-img {
+    display: block;
+    width: 100%;
+    border-radius: .3rem;
+}
+/* 图片形式的关闭按钮 */
+.yk-modal .yk-modal-close {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 1.3rem;
+    line-height: 1.3rem;
+    margin: auto;
+    bottom: -3rem;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 100;
+    color: #eee;
+    border: 1px solid #eee;
+    border-radius: 50%;
+}
+/* 加载提示组件 */
+/*
+ * @Description: Loading组件
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+/* 页面加载提示组件 */
+.yk-loading{
+    padding: 1rem 0;
+    text-align: center;
+}
+/* 页面加载提示组件的图标 */
+.yk-loading > .yk-loading-icon{
+    font-size: 4.5rem;
+    color: rgba(0, 0, 0, .05);
+}
+/* 页面加载提示组件的提示信息 */
+.yk-loading > .yk-loading-info{
+    display: block;
+    margin-top: .6rem;
+    font-size: .8rem;
+    color: #ccc;
+}
+/* 单行加载提示组件 */
+.yk-loading-inline {
+    margin: 1.5rem auto 1rem;
+    width: 12.5rem;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+    color: #999;
+    height: 1rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+/* 单行加载提示组件的文本信息 */
+.yk-loading-inline > .yk-loading-info {
+    display: inline-block;
+    padding: 0 .5rem;
+    position: relative;
+    top: -.7rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: .7rem;
+    background: #fff;
+}
+/* 单行加载提示组件的图标 */
+.yk-loading-inline > .yk-loading-info > .yk-loading-icon {
+    color: rgba(0,0,0,.2);
+}
+/* 垂直方向上振动 */
+.fa-vibrate-y{
+    -webkit-animation: fa-vibrate-y 1.5s infinite ease-in;
+            animation: fa-vibrate-y 1.5s infinite ease-in;
+}
+/* 振动轨迹 */
+@-webkit-keyframes fa-vibrate-y{
+    0% {
+        -webkit-transform: translateY(-10%);
+                transform: translateY(-10%);
+    }
+    50% {
+        -webkit-transform: translateY(10%);
+                transform: translateY(10%);
+    }
+    100% {
+        -webkit-transform: translateY(-10%);
+                transform: translateY(-10%);
+    }
+}
+@keyframes fa-vibrate-y{
+    0% {
+        -webkit-transform: translateY(-10%);
+                transform: translateY(-10%);
+    }
+    50% {
+        -webkit-transform: translateY(10%);
+                transform: translateY(10%);
+    }
+    100% {
+        -webkit-transform: translateY(-10%);
+                transform: translateY(-10%);
+    }
+}
+/* Toast弹出提示组件 */
+/*
+ * @Description: Toast组件
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+/* Toast组件 */
+.yk-toast {
+    position: fixed;
+    width: 7rem;
+    top: 45%;
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 1rem 0;
+    opacity: 0;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0,0,0,.6);
+    border-radius: .4rem;
+    -webkit-transition: opacity .3s, -webkit-transform .3s;
+    transition: opacity .3s, -webkit-transform .3s;
+    transition: transform .3s, opacity .3s;
+    transition: transform .3s, opacity .3s, -webkit-transform .3s;
+    z-index: 301;
+}
+/* 显示Toast组件 */
+.yk-toast.show{
+    opacity: 1;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+/* Toast组件中的图标 */
+.yk-toast > .yk-toast-icon{
+    font-size: 2.2rem;
+}
+/* Toast组件中的文本部分 */
+.yk-toast > .yk-toast-info{
+    margin-top: .5rem;
+    font-size: .7rem;
+}
+/* actionSheet可选菜单 */
+/*
+ * @Description: Action-Sheet
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+/* 弹出菜单 */
+.yk-action-sheet > .yk-action-sheet-wrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 640px;
+    margin: auto;
+    background: #eee;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    z-index: 301;
+}
+/* 菜单弹出时，改变容器位置 */
+.yk-action-sheet.show .yk-action-sheet-wrap {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+/* 默认隐藏蒙版 */
+.yk-action-sheet > .yk-mask {
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+}
+/* 菜单弹出时显示模板 */
+.yk-action-sheet.show > .yk-mask {
+    opacity: 1;
+    pointer-events: auto;
+}
+/* 弹出菜单头部 */
+.yk-action-sheet .yk-action-sheet-header {
+    padding: 0 2rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    text-align: center;
+    height: 3rem;
+    background: #fff;
+}
+/* 头部标题，用来描述菜单作用 */
+.yk-action-sheet .yk-action-sheet-header > .yk-action-sheet-title {
+    -webkit-box-flex: 1;
+            flex: 1;
+    font-size: .7rem;
+    line-height: 1rem;
+    font-weight: normal;
+    color: rgba(0, 0, 0, .3);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* 中间主要内容区 */
+.yk-action-sheet .yk-action-sheet-body {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    background: #fff;
+}
+/* 菜单尾部，通常用来放取消按钮 */
+.yk-action-sheet .yk-action-sheet-footer {
+    margin-top: .3rem;
+    background: #fff;
+}
+/* 每个菜单项 */
+.yk-action-sheet .yk-action-sheet-menu {
+    display: block;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    font-size: .8rem;
+    text-align: center;
+}
+/* 菜单项的边框控制 */
+.yk-action-sheet .yk-action-sheet-menu + .yk-action-sheet-menu {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+/* article文本组件 */
+/*
+ * @Description: 文章组件
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+/* 文章组件 */
+.yk-article {
+    position: relative;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: .8rem;
+    line-height: 1.6rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+/* 文章被折叠 */
+.yk-article.fold {
+    max-height: 100vh;
+    overflow: hidden;
+}
+/* 展开按钮 */
+.yk-article .yk-article-unfold-btn {
+    display: none;
+    position: absolute;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5rem;
+    padding-top: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #e0652f;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0)), to(#fff));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #fff 100%);
+}
+/* 控制展开按钮的显示 */
+.yk-article.fold .yk-article-unfold-btn {
+    display: block;
+}
+/* 文章大标题 */
+.yk-article .yk-article-title {
+    margin: .5rem 0 1rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+/* 文章信息，用来放作者、创作时间等 */
+.yk-article .yk-article-info {
+    font-size: .8rem;
+    color: #aaa;
+}
+/* 文章小标题 */
+.yk-article .yk-article-subtitle {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+/* 文章段落 */
+.yk-article .yk-article-paragraph {
+    margin: .5rem 0 1rem;
+}
+/* 文章图片 */
+.yk-article .yk-article-img {
+    max-width: 100%;
+    margin: auto;
+}

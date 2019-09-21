@@ -1,0 +1,80 @@
+/*
+ * @Description: 网格组件
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+
+/* 网格组件 */
+.yk-grid {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #ddd;
+}
+
+/* 网格中的格子 */
+.yk-grid > .yk-grid-item {
+    position: relative;
+    flex: 1 1 33%;
+    box-sizing: border-box;
+    padding: 1.2rem 0;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+
+/* 默认三列 */
+.yk-grid .yk-grid-item:nth-child(3n) {
+    border-right: none;
+}
+
+/* grid内容区 */
+.yk-grid > .yk-grid-item > .yk-grid-icon{
+    font-size: 1.5rem;
+    color: #aaa;
+    margin-bottom: .5rem;
+}
+.yk-grid > .yk-grid-item > .yk-grid-label{
+    font-size: .6rem;
+    color: #333;
+}
+
+/* 不需要边框时取消格子上的border */
+.tt-grid.no-border > .tt-grid-item{
+    border: none !important;
+}
+
+/* 不需要边框时取消格子上所以的border */
+.yk-grid.no-border > .tt-grid-item{
+    border: none;
+}
+
+/* 两列网格 */
+.yk-grid.yk-grid-2 .yk-grid-item{
+    border-right: 1px solid #ddd;
+    flex-basis: 50%;
+    padding: 1.8rem 0;
+}
+.yk-grid.yk-grid-2 .yk-grid-item:nth-child(2n){
+    border-right: none;
+}
+
+
+/* 四列网格 */
+.yk-grid.yk-grid-4 .yk-grid-item{
+    border-right: 1px solid #ddd;
+    flex-basis: 25%;
+    padding: .9rem 0;
+}
+.yk-grid.yk-grid-4 .yk-grid-item:nth-child(4n){
+    border-right: none;
+}
+/* 五列网格 */
+.yk-grid.yk-grid-5 .yk-grid-item{
+    border-right: 1px solid #ddd;
+    flex-basis: 20%;
+    padding: .6rem 0;
+}
+.yk-grid.yk-grid-5 .yk-grid-item:nth-child(5n){
+    border-right: none;
+}

@@ -1,0 +1,126 @@
+/*
+ * @Description: 输入框样式
+ * @Author: Lisemd
+ * @Date: 2019/9/20
+ */
+
+/* 表单的单行容器 */
+.yk-form-item {
+    display: flex;
+    position: relative;
+    padding-left: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* 去掉最后一行的下边框 */
+.yk-form-item:last-child {
+    border-bottom: none;
+}
+
+/* 表单标签 */
+.yk-form-item > .yk-form-label {
+    display: block;
+    width: 3.5rem;
+    font-size: .8rem;
+    color: #666;
+    height: 2rem;
+    line-height: 2rem;
+}
+
+/* 表单内容区 */
+.yk-form-item > .yk-form-body {
+    flex: 1;
+}
+
+/* 输入框 */
+.yk-form-item > .yk-form-body > .yk-input {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: .8rem;
+    border: none;
+}
+
+/* 表单中的清空按钮 */
+.yk-form-item > .yk-form-body > .yk-input-reset {
+    position: absolute;
+    width: .8rem;
+    height: .8rem;
+    line-height: .8rem;
+    top: 50%;
+    margin-top: -.4rem;
+    right: 1rem;
+    font-size: .6rem;
+    background: #aaa;
+    color: #fff;
+    border-radius: 50%;
+}
+
+/* 表单中的错误提示按钮 */
+.yk-form-item > .yk-form-body > .yk-input-warning {
+    position: absolute;
+    width: .8rem;
+    height: .8rem;
+    line-height: .8rem;
+    top: 50%;
+    margin-top: -.4rem;
+    right: 1rem;
+    font-size: .6rem;
+    color: red;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+/* 自定义单选 */
+.yk-form-item > .yk-radio{
+    flex: 1;
+    font-size: .8rem;
+    line-height: 2rem;
+}
+/* 未选中状态的图标 */
+.yk-form-item > .yk-radio > .yk-radio-icon{
+    margin-right: .5rem;
+    color: #09BB07;
+    visibility: hidden;
+}
+/* 选中状态的图标 */
+.yk-form-item > .yk-radio.checked > .yk-radio-icon{
+    visibility: visible;
+}
+/* 隐藏的radio类型的input */
+.yk-form-item > .yk-radio > .yk-radio-input{
+    position: absolute;
+    left: -999rem;
+}
+
+/* 自定义多选 */
+.yk-form-item > .yk-check {
+    flex: 1;
+    font-size: .8rem;
+    line-height: 2rem;
+}
+
+/* 未选中状态的图标 */
+.yk-form-item > .yk-check > .yk-check-icon {
+    margin-right: .5rem;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    color: rgba(0,0,0,0);
+    font-size: .6rem;
+    width: .8rem;
+    height: .8rem;
+    line-height: .8rem;
+}
+
+/* 选中状态的图标 */
+.yk-form-item > .yk-check.checked > .yk-check-icon {
+    background: #09BB07;
+    color: #fff;
+    border-color: rgba(0,0,0,0)
+}
+
+/* 隐藏的check类型的input */
+.yk-form-item > .yk-check > .yk-check-input {
+    position: absolute;
+    left: -999rem;
+}

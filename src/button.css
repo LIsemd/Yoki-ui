@@ -1,0 +1,79 @@
+/*
+ * @Description: 按钮样式
+ * @Author: Lisemd
+ * @Date: 2019/9/21
+ */
+
+/* 按钮默认样式 */
+.yk-btn {
+    display: block;
+    position: relative;
+    width: 10rem;
+    margin: 0 auto;
+    padding: .5rem 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: .7rem;
+    text-align: center;
+    color: #000;
+    border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* 定制主操作按钮 */
+.yk-btn.yk-btn-primary {
+    background-color: #1AAD19;
+    color: #fff;
+}
+
+/* 定制警示按钮 */
+.yk-btn.yk-btn-warning {
+    background-color: #E64340;
+    color: #fff;
+}
+
+/* 定制不可用按钮 */
+.yk-btn.yk-btn-disable {
+    background-color: #F7F7F7;
+    opacity: .6;
+    color: #999;
+}
+
+/* 大按钮 */
+.yk-btn.yk-btn-large {
+    width: 100%;
+    font-size: .9rem;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+
+/* 小按钮 */
+.yk-btn.yk-btn-small {
+    display: inline-block;
+    width: 3rem;
+    font-size: .5rem;
+    padding: .2rem .1rem;
+}
+
+/* 镂空按钮 */
+.yk-btn.yk-btn-primary.yk-btn-hollow {
+    background-color: rgba(0,0,0,0);
+    border-color: #1AAD19;
+    color: #1AAD19;
+}
+
+.yk-btn.yk-btn-warning.yk-btn-hollow {
+    background-color: rgba(0,0,0,0);
+    border-color: #E64340;
+    color: #E64340;
+}
+
+.yk-btn.yk-btn-disable.yk-btn-hollow {
+    background-color: #F7F7F7;
+    border-color: #999;
+    color: #999;
+}

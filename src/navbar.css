@@ -1,0 +1,43 @@
+/*
+ * @Description: 底部导航栏
+ * @Author: Lisemd
+ * @Date: 2019/9/20
+ */
+
+/* 底部导航栏 */
+.yk-navbar {
+    display: flex;
+    position: fixed;
+    box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+    max-width: 640px;
+    height: 2.5rem;
+    z-index: 200;
+    border-top: 1px solid #ddd;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+/* 导航项目 */
+.yk-navbar > .navbar-item {
+    flex: 1;
+    color: #808080;
+}
+
+/* 被选中时的样式 */
+.yk-navbar > .navbar-item.active {
+    color: #09BB07;
+}
+
+/* 导航栏图标 */
+.yk-navbar > .navbar-item > .icon {
+    padding: .3rem 0 .2rem;
+    font-size: 1.1rem;
+}
+
+/* 导航栏名称 */
+.yk-navbar > .navbar-item > .name {
+    display: block;
+    font-size: .5rem;
+}

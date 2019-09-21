@@ -1,0 +1,48 @@
+/*
+ * @Description: 内容区
+ * @Author: Lisemd
+ * @Date: 2019/9/20
+ */
+
+/* 内容区 */
+.yk-content {
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: auto;
+    height: 100%;
+}
+
+/* 根据header和navbar自动适应内容区高度 */
+.yk-header ~ .yk-content{
+    padding-top: 2.3rem;
+}
+.yk-navbar ~ .yk-content{
+    padding-bottom: 2.5rem;
+}
+
+/* 内容分区 -- Panel 面板 */
+/* 面板 */
+.yk-content .yk-panel-title {
+    height: 1.8rem;
+    line-height: 1.8rem;
+    padding-left: 1rem;
+    color: #aaa;
+    background: #fff;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    font-weight: normal;
+}
+/* Panel内容区 */
+.yk-content .yk-panel-body {
+    position: relative;
+    margin-bottom: .6rem;
+    padding: .6rem 1rem;
+    background: #fff;
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+/* 手动设置内容区是否有内边距 */
+.yk-content .yk-panel-body.no-padding {
+    padding: 0;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="../src/yoki-ui.css">
+    <title>Search</title>
+</head>
+<body>
+<div class="yk-content">
+    <!-- 带suggest的搜索框 -->
+    <div class="yk-search">
+        <!-- 搜索框 -->
+        <form class="yk-search-form" action="#">
+            <div class="yk-search-input-wrap">
+                <i class="fa fa-search yk-search-icon"></i>
+                <input type="text" class="yk-search-input" placeholder="搜索" autocomplete="off" required/>
+                <i class="fa fa-close yk-search-clear"></i>
+            </div>
+            <span class="yk-search-cancel">取消</span>
+        </form>
+        <!-- 搜索建议 -->
+        <ul class="yk-search-suggest">
+            <li class="yk-suggest-item">手机</li>
+            <li class="yk-suggest-item">iPhone XS Max</li>
+            <li class="yk-suggest-item">华为P30</li>
+            <li class="yk-suggest-item">小米 MIX3</li>
+            <li class="yk-suggest-item">诺基亚1110</li>
+        </ul>
+    </div>
+    <p class="content">内容区</p>
+</div>
+</body>
+</html>
